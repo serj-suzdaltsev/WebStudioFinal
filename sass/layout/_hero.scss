@@ -14,14 +14,14 @@
             to right,
             rgba(47, 48, 58, 0.40), 
             rgba(47, 48, 58, 0.40)), 
-            url(../../images/img/mobile/hero_fon_mob.jpg);
+            url('../../images/img/mobile/hero_fon_mob.jpg');
             
             @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
                 background-image: linear-gradient(
                     to right, 
                     rgba(47, 48, 58, 0.40), 
                     rgba(47, 48, 58, 0.40)), 
-                    url(../../images/img/mobile/hero_fon_mob@2x.jpg);
+                    url('../../images/img/mobile/hero_fon_mob@2x.jpg');
             }
     }
 
@@ -31,13 +31,13 @@
         background-image: linear-gradient(0deg, 
         rgba(47, 48, 58, 0.40), 
         rgba(47, 48, 58, 0.40)), 
-        url(../../images/img/tablet/hero_fon_tab.jpg);
+        url('../../images/img/tablet/hero_fon_tab.jpg');
             
             @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
                 background-image: linear-gradient(0deg, 
                 rgba(47, 48, 58, 0.40), 
                 rgba(47, 48, 58, 0.40)), 
-                url(../../images/img/tablet/hero_fon_tab@2x.jpg);
+                url('../../images/img/tablet/hero_fon_tab@2x.jpg');
             }
     }
 
@@ -46,10 +46,16 @@
         height: 600px;
         padding-top: 200px;
         margin-bottom: 94px;
-        background-image: linear-gradient(0deg, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), url(../../images/img/desktop/hero_fon_desk.jpg);
+        background-image: linear-gradient(0deg, 
+            rgba(47, 48, 58, 0.40), 
+            rgba(47, 48, 58, 0.40)), 
+            url('../../images/img/desktop/hero_fon_desk.jpg');
             
             @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-                background-image: linear-gradient(0deg, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), url(../../images/img/desktop/hero_fon_desk@2x.jpg);
+                background-image: linear-gradient(0deg, 
+                rgba(47, 48, 58, 0.40), 
+                rgba(47, 48, 58, 0.40)), 
+                url('../../images/img/desktop/hero_fon_desk@2x.jpg');
             }
     }
 }
