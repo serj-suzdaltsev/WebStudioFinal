@@ -488,21 +488,11 @@ img {
     background-image: linear-gradient(0deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/img/mobile/hero_fon_mob.jpg");
   }
 }
-@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2) and (min-width: 280px), screen and (max-width: 767px) and (min-resolution: 192dpi) and (min-width: 280px), screen and (max-width: 767px) and (min-resolution: 2dppx) and (min-width: 280px) {
-  .hero {
-    background-image: linear-gradient(0deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/img/mobile/hero_fon_mob@2x.jpg");
-  }
-}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero {
     width: 768px;
     padding: 118px 204px;
     background-image: linear-gradient(0deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/img/tablet/hero_fon_tab.jpg");
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) and (min-width: 768px) {
-  .hero {
-    background-image: linear-gradient(0deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/img/tablet/hero_fon_tab@2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
@@ -512,11 +502,6 @@ img {
     padding-top: 200px;
     margin-bottom: 94px;
     background-image: linear-gradient(0deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/img/desktop/hero_fon_desk.jpg");
-  }
-}
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-width: 1200px) and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-width: 1200px) and (min-resolution: 2dppx) and (min-width: 1200px) {
-  .hero {
-    background-image: linear-gradient(0deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/img/desktop/hero_fon_desk@2x.jpg");
   }
 }
 
