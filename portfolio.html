@@ -1,46 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Портфоліо</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
-
-    <!-- Header -->
+                            <!-- ============================= HEADER ============================= -->
     <header class="header">
-        <div class="container main-nav">
-            <nav class="site-nav">
-                <a href="./index.html" class="link logo">Web<span class="logo-black">Studio</span></a>
-                <ul class="nav-list">
-                    <li class="nav-item">
+        <div class="container header__nav-block">
+            <nav class="header__main-nav">
+                <a href="./" class="logo">Web<span class="logo__header">Studio</span></a>
+                <ul class="header__nav-list">
+                    <li class="header__nav-item">
                         <a href="./index.html">Студія</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="./portfolio.html" class="link-current">Портфоліо</a>
+                    <li class="header__nav-item">
+                        <a href="./portfolio.html" class="header__nav-active">Портфоліо</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="header__nav-item">
                         <a href="">Контакти</a>
+                        <ul class="submenu">
+                            <li class="submenu__item"><a href="" class="submenu__link">Test item 1</a></li>
+                            <li class="submenu__item"><a href="" class="submenu__link">Test item 2</a></li>
+                            <li class="submenu__item"><a href="" class="submenu__link">Test item 3</a></li>
+                            <li class="submenu__item"><a href="" class="submenu__link">Test item 4</a></li>
+                            <li class="submenu__item"><a href="" class="submenu__link">Test item 5</a></li>
+                            <li class="submenu__item"><a href="" class="submenu__link">Test item 6</a></li>
+                        </ul>
                     </li>
                 </ul>
             </nav>
-
-            <ul class="auth-nav">
-                <li class="auth-item">
-                    <a href="mailto:info@devstudio.com" class="link header-cred">
-                        <svg class="auth-icon" width="16px" height="12px">
+            <button class="header__mob-menu-btn js-open-menu" type="button">
+                <svg class="header__mob-menu-icon">
+                    <use href="./images/sprite.svg#mobile__burger-menu"></use>
+                </svg>
+            </button>
+            <ul class="header__auth-list">
+                <li class="header__auth-item">
+                    <a href="mailto:info@devstudio.com" class="header__auth-link">
+                        <svg class="header__auth-icon-mail">
                             <use href="./images/sprite.svg#icon-header_envelope"></use>
                         </svg>
                         info@devstudio.com
                     </a>
                 </li>
-                <li class="auth-item">
-                    <a href="tel:+380961111111" class="header-cred">
-                        <svg class="auth-icon" width="16px" height="12px">
+                <li class="header__auth-item">
+                    <a href="tel:+380961111111" class="header__auth-link">
+                        <svg class="header__auth-icon-phone">
                             <use href="./images/sprite.svg#icon-header_smartphone"></use>
                         </svg>
                         +38 096 111 11 11
@@ -48,229 +59,465 @@
                 </li>
             </ul>
         </div>
+        <div class="mobile-menu js-menu-container">
+            <button class="mobile-menu__close js-close-menu" type="button">
+                <svg class="mobile-menu__icon">
+                    <use href="./images/sprite.svg#icon-modal-close"></use>
+                </svg>
+            </button>
+            <ul class="mobile-menu__list">
+                <li class="mobile-menu__item">
+                    <a href="./index.html" class="header__nav-active">Студія</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="./portfolio.html">Портфоліо</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="">Контакти</a>
+                </li>
+            </ul>
+            <ul class="mobile-menu__auth">
+                <li class="auth-menu__phone">
+                    <a href="tel:+380961111111" class="auth-menu__link">+38 096 111 11 11</a>
+                </li>
+                <li class="auth-menu__mail">
+                    <a href="mailto:info@devstudio.com" class="auth-menu__link">info@devstudio.com</a>
+                </li>
+            </ul>
+            <ul class="mobile-menu__socials">
+                <li class="mobile-menu__socials-item">
+                    <a href="https://www.instagram.com" class="socials-item__link">Instagram</a>
+                </li>
+                <li class="mobile-menu__socials-item">
+                    <a href="https://www.twitter.com" class="socials-item__link">Twitter</a>
+                </li>
+                <li class="mobile-menu__socials-item">
+                    <a href="https://www.facebook.com" class="socials-item__link">Facebook</a>
+                </li>
+                <li class="mobile-menu__socials-item">
+                    <a href="https://www.linkedin.com" class="socials-item__link">Linkedin</a>
+                </li>
+            </ul>
+        </div>
     </header>
 
     <main>
-        <!-- navigation-block -->
+                            <!-- ============================= BUTTONS BLOCK ============================= -->
+
         <section>
-            <div class="container buttons-container">
-                <ul class="buttons-list">
-                    <li class="sorting-item"><button type="button" class="sorting-button">Усі</button></li>
-                    <li class="sorting-item"><button type="button" class="sorting-button">Веб-сайти</button></li>
-                    <li class="sorting-item"><button type="button" class="sorting-button">Додатки</button></li>
-                    <li class="sorting-item"><button type="button" class="sorting-button">Дизайн</button></li>
-                    <li class="sorting-item"><button type="button" class="sorting-button">Маркетинг</button></li>
+            <div class="container buttn__section">
+                <h1 class="section__title visually-hidden">Buttons block</h1>
+                <ul class="button__list">
+                    <li class="sort__item">
+                        <button type="button" class="sort__button">Усі</button>
+                    </li>
+                    <li class="sort__item">
+                        <button type="button" class="sort__button">Веб-сайти</button>
+                    </li>
+                    <li class="sort__item">
+                        <button type="button" class="sort__button">Додатки</button>
+                    </li>
+                    <li class="sort__item">
+                        <button type="button" class="sort__button">Дизайн</button>
+                    </li>
+                    <li class="sort__item">
+                        <button type="button" class="sort__button">Маркетинг</button>
+                    </li>
                 </ul>
             </div>
         </section>
 
-        <!-- product-grid -->
         <section>
             <div class="container">
-                <h1 class="hidden-title">Грід</h1>
+                <h2 class="section__title visually-hidden">Grid</h2>
                 <ul class="grid">
-                    <li class="grid-item">
+                    <li class="product">
                         <a href="">
-                            <div class="grid-thumb">
-                                <img src="./images/img/GRDpic1.jpg" alt="">
-                                <div class="grid-item-overlay">
-                                    <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. 
+                            <div class="product__thumb">
+                                <picture>
+                                    <source srcset="./images/img/desktop/port_desk/port_desk1WP.webp 1x, 
+                                                    ./images/img/desktop/port_desk/port_desk1@2xWP.webp 2x"
+                                                    media="(min-width:1200px)" type="image/webp">
+                                    <source srcset="./images/img/desktop/port_desk/port_desk1.jpg 1x, 
+                                                    ./images/img/desktop/port_desk/port_desk1@2x.jpg 2x"
+                                                    media="(min-width:1200px)">
+                                    <source srcset="./images/img/tablet/port_tabl/port_tabl1WP.webp 1x, 
+                                                    ./images/img/tablet/port_tabl/port_tabl1@2xWP.webp 2x"
+                                                    media="(min-width:768px)" type="image/webp">
+                                    <source srcset="./images/img/tablet/port_tabl/port_tabl1.jpg 1x, 
+                                                    ./images/img/tablet/port_tabl/port_tabl1@2x.jpg 2x"
+                                                    media="(min-width:768px)">
+                                    <source srcset="./images/img/mobile/port_mob/port_mob1WP.webp 1x, 
+                                                    ./images/img/mobile/port_mob/port_mob1@2xWP.webp 2x"
+                                                    media="(min-width:320px)" type="image/webp">
+                                    <source srcset="./images/img/mobile/port_mob/port_mob1.jpg 1x, 
+                                                    ./images/img/mobile/port_mob/port_mob1@2x.jpg 2x"
+                                                    media="(min-width:320px)">
+                                    <img src="./images/img/tablet/port_tabl/port_tabl1.jpg" alt="Сладкая булочка">
+                                </picture>
+                                <div class="product__overlay">
+                                    <p class="overlay__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+                                </div>
+                            </div>
+                            <div class="product__meta">
+                                <h2 class="product__title">Технокряк</h2>
+                                <p class="product__detail">Веб-сайт</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="product">
+                        <a href="">
+                            <div class="product__thumb">
+                                <picture>
+                                    <source srcset="./images/img/desktop/port_desk/port_desk2WP.webp 1x, 
+                                                    ./images/img/desktop/port_desk/port_desk2@2xWP.webp 2x"
+                                                    media="(min-width:1200px)" type="image/webp">
+                                    <source srcset="./images/img/desktop/port_desk/port_desk2.jpg 1x, 
+                                                    ./images/img/desktop/port_desk/port_desk2@2x.jpg 2x"
+                                                    media="(min-width:1200px)">
+                                    <source srcset="./images/img/tablet/port_tabl/port_tabl2WP.webp 1x, 
+                                                    ./images/img/tablet/port_tabl/port_tabl2@2xWP.webp 2x"
+                                                    media="(min-width:768px)" type="image/webp">
+                                    <source srcset="./images/img/tablet/port_tabl/port_tabl2.jpg 1x, 
+                                                    ./images/img/tablet/port_tabl/port_tabl2@2x.jpg 2x"
+                                                    media="(min-width:768px)">
+                                    <source srcset="./images/img/mobile/port_mob/port_mob2WP.webp 1x, 
+                                                    ./images/img/mobile/port_mob/port_mob2@2xWP.webp 2x"
+                                                    media="(min-width:320px)" type="image/webp">
+                                    <source srcset="./images/img/mobile/port_mob/port_mob2.jpg 1x, 
+                                                    ./images/img/mobile/port_mob/port_mob2@2x.jpg 2x"
+                                                    media="(min-width:320px)">
+                                    <img src="./images/img/tablet/port_tabl/port_tabl2.jpg" alt="Сладкая булочка">
+                                </picture>
+                                <div class="product__overlay">
+                                    <p class="overlay__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                                         Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                                 </div>
                             </div>
-                            <div class="grid-content">
-                                <h2 class="grid-heading">Технокряк</h2>
-                                <p class="grid-text">Веб-сайт</p>
+                            <div class="product__meta">
+                                <h2 class="product__title">Постер New Orlean vs Golden Star</h2>
+                                <p class="product__detail">Дизайн</p>
                             </div>
                         </a>
                     </li>
-                    <li class="grid-item">
+                    <li class="product">
                         <a href="">
-                            <div class="grid-thumb">
-                                <img src="./images/img/GRDpic2.jpg" alt="">
-                                <div class="grid-item-overlay">
-                                    <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                            <div class="product__thumb">
+                                <picture>
+                                    <source srcset="./images/img/desktop/port_desk/port_desk3WP.webp 1x, 
+                                                    ./images/img/desktop/port_desk/port_desk3@2xWP.webp 2x"
+                                                    media="(min-width:1200px)" type="image/webp">
+                                    <source srcset="./images/img/desktop/port_desk/port_desk3.jpg 1x, 
+                                                    ./images/img/desktop/port_desk/port_desk3@2x.jpg 2x"
+                                                    media="(min-width:1200px)">
+                                    <source srcset="./images/img/tablet/port_tabl/port_tabl3WP.webp 1x, 
+                                                    ./images/img/tablet/port_tabl/port_tabl3@2xWP.webp 2x"
+                                                    media="(min-width:768px)" type="image/webp">
+                                    <source srcset="./images/img/tablet/port_tabl/port_tabl3.jpg 1x, 
+                                                    ./images/img/tablet/port_tabl/port_tabl3@2x.jpg 2x"
+                                                    media="(min-width:768px)">
+                                    <source srcset="./images/img/mobile/port_mob/port_mob3WP.webp 1x, 
+                                                    ./images/img/mobile/port_mob/port_mob3@2xWP.webp 2x"
+                                                    media="(min-width:320px)" type="image/webp">
+                                    <source srcset="./images/img/mobile/port_mob/port_mob3.jpg 1x, 
+                                                    ./images/img/mobile/port_mob/port_mob3@2x.jpg 2x"
+                                                    media="(min-width:320px)">
+                                    <img src="./images/img/tablet/port_tabl/port_tabl3.jpg" alt="Сладкая булочка">
+                                </picture>
+                                <div class="product__overlay">
+                                    <p class="overlay__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                                         Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                                 </div>
                             </div>
-                            <div class="grid-content">
-                                <h2 class="grid-heading">Постер New Orlean vs Golden Star</h2>
-                                <p class="grid-text">Дизайн</p>
+                            <div class="product__meta">
+                                <h2 class="product__title">Ресторан Seafood</h2>
+                                <p class="product__detail">Додаток</p>
                             </div>
                         </a>
                     </li>
-                    <li class="grid-item">
+                    <li class="product">
                         <a href="">
-                            <div class="grid-thumb">
-                                <img src="./images/img/GRDpic3.jpg" alt="">
-                                <div class="grid-item-overlay">
-                                    <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                            <div class="product__thumb">
+                                <picture>
+                                    <source srcset="./images/img/desktop/port_desk/port_desk4WP.webp 1x, 
+                                                    ./images/img/desktop/port_desk/port_desk4@2xWP.webp 2x"
+                                                    media="(min-width:1200px)" type="image/webp">
+                                    <source srcset="./images/img/desktop/port_desk/port_desk4.jpg 1x, 
+                                                    ./images/img/desktop/port_desk/port_desk4@2x.jpg 2x"
+                                                    media="(min-width:1200px)">
+                                    <source srcset="./images/img/tablet/port_tabl/port_tabl4WP.webp 1x, 
+                                                    ./images/img/tablet/port_tabl/port_tabl4@2xWP.webp 2x"
+                                                    media="(min-width:768px)" type="image/webp">
+                                    <source srcset="./images/img/tablet/port_tabl/port_tabl4.jpg 1x, 
+                                                    ./images/img/tablet/port_tabl/port_tabl4@2x.jpg 2x"
+                                                    media="(min-width:768px)">
+                                    <source srcset="./images/img/mobile/port_mob/port_mob4WP.webp 1x, 
+                                                    ./images/img/mobile/port_mob/port_mob4@2xWP.webp 2x"
+                                                    media="(min-width:320px)" type="image/webp">
+                                    <source srcset="./images/img/mobile/port_mob/port_mob4.jpg 1x, 
+                                                    ./images/img/mobile/port_mob/port_mob4@2x.jpg 2x"
+                                                    media="(min-width:320px)">
+                                    <img src="./images/img/tablet/port_tabl/port_tabl4.jpg" alt="Сладкая булочка">
+                                </picture>
+                                <div class="product__overlay">
+                                    <p class="overlay__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                                         Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                                 </div>
                             </div>
-                            <div class="grid-content">
-                                <h2 class="grid-heading">Ресторан Seafood</h2>
-                                <p class="grid-text">Додаток</p>
+                            <div class="product__meta">
+                                <h2 class="product__title">Проєкт Prime</h2>
+                                <p class="product__detail">Маркетинг</p>
                             </div>
                         </a>
                     </li>
-                    <li class="grid-item">
+                    <li class="product">
                         <a href="">
-                            <div class="grid-thumb">
-                                <img src="./images/img/GRDpic4.jpg" alt="">
-                                <div class="grid-item-overlay">
-                                    <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                            <div class="product__thumb">
+                                <picture>
+                                    <source srcset="./images/img/desktop/port_desk/port_desk5WP.webp 1x, 
+                                                    ./images/img/desktop/port_desk/port_desk5@2xWP.webp 2x"
+                                                    media="(min-width:1200px)" type="image/webp">
+                                    <source srcset="./images/img/desktop/port_desk/port_desk5.jpg 1x, 
+                                                    ./images/img/desktop/port_desk/port_desk5@2x.jpg 2x"
+                                                    media="(min-width:1200px)">
+                                    <source srcset="./images/img/tablet/port_tabl/port_tabl5WP.webp 1x, 
+                                                    ./images/img/tablet/port_tabl/port_tabl5@2xWP.webp 2x"
+                                                    media="(min-width:768px)" type="image/webp">
+                                    <source srcset="./images/img/tablet/port_tabl/port_tabl5.jpg 1x, 
+                                                    ./images/img/tablet/port_tabl/port_tabl5@2x.jpg 2x"
+                                                    media="(min-width:768px)">
+                                    <source srcset="./images/img/mobile/port_mob/port_mob5WP.webp 1x, 
+                                                    ./images/img/mobile/port_mob/port_mob5@2xWP.webp 2x"
+                                                    media="(min-width:320px)" type="image/webp">
+                                    <source srcset="./images/img/mobile/port_mob/port_mob5.jpg 1x, 
+                                                    ./images/img/mobile/port_mob/port_mob5@2x.jpg 2x"
+                                                    media="(min-width:320px)">
+                                    <img src="./images/img/tablet/port_tabl/port_tabl5.jpg" alt="Сладкая булочка">
+                                </picture>
+                                <div class="product__overlay">
+                                    <p class="overlay__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                                         Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                                 </div>
                             </div>
-                            <div class="grid-content">
-                                <h2 class="grid-heading">Проєкт Prime</h2>
-                                <p class="grid-text">Маркетинг</p>
+                            <div class="product__meta">
+                                <h2 class="product__title">Проєкт Boxes</h2>
+                                <p class="product__detail">Додаток</p>
                             </div>
                         </a>
                     </li>
-                    <li class="grid-item">
+                    <li class="product">
                         <a href="">
-                            <div class="grid-thumb">
-                                <img src="./images/img/GRDpic5.jpg" alt="">
-                                <div class="grid-item-overlay">
-                                    <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                            <div class="product__thumb">
+                                <picture>
+                                    <source srcset="./images/img/desktop/port_desk/port_desk6WP.webp 1x, 
+                                                    ./images/img/desktop/port_desk/port_desk6@2xWP.webp 2x"
+                                                    media="(min-width:1200px)" type="image/webp">
+                                    <source srcset="./images/img/desktop/port_desk/port_desk6.jpg 1x, 
+                                                    ./images/img/desktop/port_desk/port_desk6@2x.jpg 2x"
+                                                    media="(min-width:1200px)">
+                                    <source srcset="./images/img/tablet/port_tabl/port_tabl6WP.webp 1x, 
+                                                    ./images/img/tablet/port_tabl/port_tabl6@2xWP.webp 2x"
+                                                    media="(min-width:768px)" type="image/webp">
+                                    <source srcset="./images/img/tablet/port_tabl/port_tabl6.jpg 1x, 
+                                                    ./images/img/tablet/port_tabl/port_tabl6@2x.jpg 2x"
+                                                    media="(min-width:768px)">
+                                    <source srcset="./images/img/mobile/port_mob/port_mob6WP.webp 1x, 
+                                                    ./images/img/mobile/port_mob/port_mob6@2xWP.webp 2x"
+                                                    media="(min-width:320px)" type="image/webp">
+                                    <source srcset="./images/img/mobile/port_mob/port_mob6.jpg 1x, 
+                                                    ./images/img/mobile/port_mob/port_mob6@2x.jpg 2x"
+                                                    media="(min-width:320px)">
+                                    <img src="./images/img/tablet/port_tabl/port_tabl6.jpg" alt="Сладкая булочка">
+                                </picture>
+                                <div class="product__overlay">
+                                    <p class="overlay__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                                         Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                                 </div>
                             </div>
-                            <div class="grid-content">
-                                <h2 class="grid-heading">Проєкт Boxes</h2>
-                                <p class="grid-text">Додаток</p>
+                            <div class="product__meta">
+                                <h2 class="product__title">Inspiration has no Borders</h2>
+                                <p class="product__detail">Веб-сайт</p>
                             </div>
                         </a>
                     </li>
-                    <li class="grid-item">
+                    <li class="product">
                         <a href="">
-                            <div class="grid-thumb">
-                                <img src="./images/img/GRDpic6.jpg" alt="">
-                                <div class="grid-item-overlay">
-                                    <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                            <div class="product__thumb">
+                                <picture>
+                                    <source srcset="./images/img/desktop/port_desk/port_desk7WP.webp 1x, 
+                                                    ./images/img/desktop/port_desk/port_desk7@2xWP.webp 2x"
+                                                    media="(min-width:1200px)" type="image/webp">
+                                    <source srcset="./images/img/desktop/port_desk/port_desk7.jpg 1x, 
+                                                    ./images/img/desktop/port_desk/port_desk7@2x.jpg 2x"
+                                                    media="(min-width:1200px)">
+                                    <source srcset="./images/img/tablet/port_tabl/port_tabl7WP.webp 1x, 
+                                                    ./images/img/tablet/port_tabl/port_tabl7@2xWP.webp 2x"
+                                                    media="(min-width:768px)" type="image/webp">
+                                    <source srcset="./images/img/tablet/port_tabl/port_tabl7.jpg 1x, 
+                                                    ./images/img/tablet/port_tabl/port_tabl7@2x.jpg 2x"
+                                                    media="(min-width:768px)">
+                                    <source srcset="./images/img/mobile/port_mob/port_mob7WP.webp 1x, 
+                                                    ./images/img/mobile/port_mob/port_mob7@2xWP.webp 2x"
+                                                    media="(min-width:320px)" type="image/webp">
+                                    <source srcset="./images/img/mobile/port_mob/port_mob7.jpg 1x, 
+                                                    ./images/img/mobile/port_mob/port_mob7@2x.jpg 2x"
+                                                    media="(min-width:320px)">
+                                    <img src="./images/img/tablet/port_tabl/port_tabl7.jpg" alt="Сладкая булочка">
+                                </picture>
+                                <div class="product__overlay">
+                                    <p class="overlay__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                                         Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                                 </div>
                             </div>
-                            <div class="grid-content">
-                                <h2 class="grid-heading">Inspiration has no Borders</h2>
-                                <p class="grid-text">Веб-сайт</p>
+                            <div class="product__meta">
+                                <h2 class="product__title">Видання Limited Edition</h2>
+                                <p class="product__detail">Дизайн</p>
                             </div>
                         </a>
                     </li>
-                    <li class="grid-item">
+                    <li class="product">
                         <a href="">
-                            <div class="grid-thumb">
-                                <img src="./images/img/GRDpic7.jpg" alt="">
-                                <div class="grid-item-overlay">
-                                    <p class="overlay-text"></p>
+                            <div class="product__thumb">
+                                <picture>
+                                    <source srcset="./images/img/desktop/port_desk/port_desk8WP.webp 1x, 
+                                                    ./images/img/desktop/port_desk/port_desk8@2xWP.webp 2x"
+                                                    media="(min-width:1200px)" type="image/webp">
+                                    <source srcset="./images/img/desktop/port_desk/port_desk8.jpg 1x, 
+                                                    ./images/img/desktop/port_desk/port_desk8@2x.jpg 2x"
+                                                    media="(min-width:1200px)">
+                                    <source srcset="./images/img/tablet/port_tabl/port_tabl8WP.webp 1x, 
+                                                    ./images/img/tablet/port_tabl/port_tabl8@2xWP.webp 2x"
+                                                    media="(min-width:768px)" type="image/webp">
+                                    <source srcset="./images/img/tablet/port_tabl/port_tabl8.jpg 1x, 
+                                                    ./images/img/tablet/port_tabl/port_tabl8@2x.jpg 2x"
+                                                    media="(min-width:768px)">
+                                    <source srcset="./images/img/mobile/port_mob/port_mob8WP.webp 1x, 
+                                                    ./images/img/mobile/port_mob/port_mob8@2xWP.webp 2x"
+                                                    media="(min-width:320px)" type="image/webp">
+                                    <source srcset="./images/img/mobile/port_mob/port_mob8.jpg 1x, 
+                                                    ./images/img/mobile/port_mob/port_mob8@2x.jpg 2x"
+                                                    media="(min-width:320px)">
+                                    <img src="./images/img/tablet/port_tabl/port_tabl8.jpg" alt="Сладкая булочка">
+                                </picture>
+                                <div class="product__overlay">
+                                    <p class="overlay__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                                        Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                                 </div>
                             </div>
-                            <div class="grid-content">
-                                <h2 class="grid-heading">Видання Limited Edition</h2>
-                                <p class="grid-text">Дизайн</p>
+                            <div class="product__meta">
+                                <h2 class="product__title">Проєкт LAB</h2>
+                                <p class="product__detail">Маркетинг</p>
                             </div>
                         </a>
                     </li>
-                    <li class="grid-item">
+                    <li class="product">
                         <a href="">
-                            <div class="grid-thumb">
-                                <img src="./images/img/GRDpic8.jpg" alt="">
-                                <div class="grid-item-overlay">
-                                    <p class="overlay-text"></p>
+                            <div class="product__thumb">
+                                <picture>
+                                    <source srcset="./images/img/desktop/port_desk/port_desk9WP.webp 1x, 
+                                                    ./images/img/desktop/port_desk/port_desk9@2xWP.webp 2x"
+                                                    media="(min-width:1200px)" type="image/webp">
+                                    <source srcset="./images/img/desktop/port_desk/port_desk9.jpg 1x, 
+                                                    ./images/img/desktop/port_desk/port_desk9@2x.jpg 2x"
+                                                    media="(min-width:1200px)">
+                                    <source srcset="./images/img/tablet/port_tabl/port_tabl9WP.webp 1x, 
+                                                    ./images/img/tablet/port_tabl/port_tabl9@2xWP.webp 2x"
+                                                    media="(min-width:768px)" type="image/webp">
+                                    <source srcset="./images/img/tablet/port_tabl/port_tabl9.jpg 1x, 
+                                                    ./images/img/tablet/port_tabl/port_tabl9@2x.jpg 2x"
+                                                    media="(min-width:768px)">
+                                    <source srcset="./images/img/mobile/port_mob/port_mob9WP.webp 1x, 
+                                                    ./images/img/mobile/port_mob/port_mob9@2xWP.webp 2x"
+                                                    media="(min-width:320px)" type="image/webp">
+                                    <source srcset="./images/img/mobile/port_mob/port_mob9.jpg 1x, 
+                                                    ./images/img/mobile/port_mob/port_mob9@2x.jpg 2x"
+                                                    media="(min-width:320px)">
+                                    <img src="./images/img/tablet/port_tabl/port_tabl9.jpg" alt="Сладкая булочка">
+                                </picture>
+                                <div class="product__overlay">
+                                    <p class="overlay__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                                        Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                                 </div>
                             </div>
-                            <div class="grid-content">
-                                <h2 class="grid-heading">Проєкт LAB</h2>
-                                <p class="grid-text">Маркетинг</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="grid-item">
-                        <a href="">
-                            <div class="grid-thumb">
-                                <img src="./images/img/GRDpic9.jpg" alt="">
-                                <div class="grid-item-overlay">
-                                    <p class="overlay-text"></p>
-                                </div>
-                            </div>
-                            <div class="grid-content">
-                                <h2 class="grid-heading">Growing Business</h2>
-                                <p class="grid-text">Додаток</p>
+                            <div class="product__meta">
+                                <h2 class="product__title">Growing Business</h2>
+                                <p class="product__detail">Додаток</p>
                             </div>
                         </a>
                     </li>
                 </ul>
             </div>
         </section>
+
     </main>
 
-    <!-- Footer -->
+                            <!-- ============================= FOOTER ============================= -->
     <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-logo-block">
-                <a href="" class="logo">Web<span class="logo-white">Studio</span></a>
-                <address>
-                    <ul class="footer-creds">
-                        <li class="footer-cred-item">
-                            <p class="footer-address">м. Київ, пр-т Лесі Українки, 26</p>
+        <div class="footer__container container">
+            <div class="footer__address-block">
+                <a href="./" class="logo">Web<span class="logo__footer">Studio</span></a>
+                <address class="footer__address">
+                    <ul class="footer__address__list">
+                        <li class="footer__address__item">
+                            <p class="footer__address">м. Київ, пр-т Лесі Українки, 26</p>
                         </li>
-                        <li class="footer-cred-item">
-                            <a href="mailto:info@devstudio.com" class="footer-cred">info@devstudio.com</a>
+                        <li class="footer__address__item">
+                            <a href="maito:info@devstudio.com" class="footer__address__meta">info@devstudio.com</a>
                         </li>
-                        <li class="footer-cred-item">
-                            <a href="tel:+380961111111" class="footer-cred">+38 096 111 11 11</a>
+                        <li class="footer__address__item">
+                            <a href="tel:+380961111111" class="footer__address__meta">+38 096 111 11 11</a>
                         </li>
                     </ul>
                 </address>
             </div>
-            <div class="footer-socials-block">
-                <h3 class="footer-join">приєднуйтесь</h3>
-                <ul class="footer-socials-list">
-                    <li class="footer-socials-item">
-                        <a href="https://www.instagram.com/" class="footer-socials-button">
-                            <svg class="footer-socials-icon" width="20px" height="20px">
+            <div class="footer__socials-block">
+                <b class="footer__socials__title">приєднуйтесь</b>
+                <ul class="footer__socials__list">
+                    <li class="footer__socials__item">
+                        <a href="https://www.instagram.com/" class="footer__socials__link">
+                            <svg class="footer__socials__icon">
                                 <use href="./images/sprite.svg#icon-footer1insta"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="footer-socials-item">
-                        <a href="https://twitter.com/" class="footer-socials-button">
-                            <svg class="footer-socials-icon" width="20px" height="20px">
+                    <li class="footer__socials__item">
+                        <a href="https://twitter.com/" class="footer__socials__link">
+                            <svg class="footer__socials__icon">
                                 <use href="./images/sprite.svg#icon-footer2twi"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="footer-socials-item">
-                        <a href="https://www.facebook.com/" class="footer-socials-button">
-                            <svg class="footer-socials-icon" width="20px" height="20px">
+                    <li class="footer__socials__item">
+                        <a href="https://www.facebook.com/" class="footer__socials__link">
+                            <svg class="footer__socials__icon">
                                 <use href="./images/sprite.svg#icon-footer3fb"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="footer-socials-item">
-                        <a href="https://www.linkedin.com/" class="footer-socials-button">
-                            <svg class="footer-socials-icon" width="20px" height="20px">
+                    <li class="footer__socials__item">
+                        <a href="https://www.linkedin.com/" class="footer__socials__link">
+                            <svg class="footer__socials__icon">
                                 <use href="./images/sprite.svg#icon-footer4lin"></use>
                             </svg>
                         </a>
                     </li>
                 </ul>
             </div>
-            <div class="footer-signup">
-                <b class="signup-heading">Підпишіться на розсилку</b>
-                <form class="footer-signup-form">
-                    <input type="email" name="mail" class="footer-mail-signup" placeholder="E-mail">
-                    <button type="submit" class="footer-signup-button">
-                        <span class="footer-button-text">Підписатися</span>
-                        <svg class="footer-tg-icon" width="24px" height="24px">
-                            <use href="./images/sprite.svg#footer-tg-signup"></use>
-                        </svg>
+            <div class="footer__signup-block">
+                <b class="footer__signup__title">Підпишіться на розсилку</b>
+                <form class="footer__signup__form">
+                    <input type="email" name="mail" class="footer__signup__field" placeholder="E-mail">
+                    <button type="submit" class="button footer__button">
+                        <span class="footer__button__text">Підписатися</span>
+                        <svg class="footer__signup__icon">
+                           <use href="./images/sprite.svg#footer-tg-signup"></use>
+                        </svg>                        
                     </button>
-                </form>
+                </form>                
             </div>
         </div>
     </footer>
+
 </body>
 </html>

@@ -1,0 +1,128 @@
+.team__section {
+    background: #F5F4FA;
+    & .container {
+        margin-bottom: 0px;
+    }
+
+    @media screen and (max-width: 1199px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 60px;
+        padding-bottom: 94px;
+    }
+}
+
+.team__title {
+    @media screen and (max-width: 1199px) {
+        @include font-props(28px, 700, normal, 0.84px);
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        @include font-props(36px, 700, normal, 1.08px);
+        margin-bottom: 30px;
+    }
+}
+
+.team__list {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.team__item {
+    margin-left: auto;
+    margin-right: auto;
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    
+    @media screen and (max-width: 449px) {
+        width: 100%;
+    }
+
+    @media screen and (min-width: 450px) and (max-width: 767px) {
+        width: 450px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 354px;
+    }
+
+    @media screen and (min-width: 1200px) {
+
+        .team__item + .team__item {
+                margin-left: 30px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .team__item:nth-child(2n + 0) {
+        margin-left: 30px;
+    }
+}
+
+.team__card {    
+    border-radius: 0px 0px 4px 4px;
+    background: var(--main-white);
+
+    &:hover {
+        box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    }
+}
+
+.team__meta {
+    padding: 30px 32px;
+}
+
+.team__name {
+    @include font-props (16px, 500, normal, 0.48px);
+    color: var(--main-black);
+    text-align: center;
+}
+
+.team__position {
+    margin-top: 10px;
+    @include font-props (16px, 400, normal, 0.48px);
+    color: var(--text-grey);
+    text-align: center;
+}
+
+.team__socials {
+    display: flex;
+    margin-top: 16px;
+    justify-content: center
+}
+
+.team__social-item {
+    @include flex-centering();
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+        background-color: var(--accent-blue);
+    }
+
+    & + & {
+        margin-left: 10px;
+    }
+}
+
+.team__icon {
+    height: 20px;
+    width: 20px;
+    fill: var(--icon-grey);
+    transition: fill 500ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+
+    .team__social-item:hover & {
+        fill: var(--main-white);
+    }
+}

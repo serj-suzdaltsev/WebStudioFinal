@@ -1,0 +1,7 @@
+.section__title {
+    @include font-props (36px, 700, normal, 1.08px);
+    color: var(--main-black);
+    text-align: center;
+    font-style: normal;
+    margin-bottom: 50px;
+}

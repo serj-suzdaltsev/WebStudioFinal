@@ -1,0 +1,19 @@
+.logo {
+    @include font-props(24px, 700, normal, 0.72px);
+    color: var(--accent-blue);
+    font-family: 'Raleway';
+    font-style: normal;
+
+    &__header {
+        color: var(--main-black);
+    }
+
+    &__footer {
+        color: var(--main-white);
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 26px;
+        letter-spacing: 0.78px;
+    }
+}

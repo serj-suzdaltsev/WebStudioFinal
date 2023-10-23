@@ -1,0 +1,166 @@
+.modal__form {
+    // width: 528px;
+    // height: 581px;
+    padding: 40px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: 449px) {
+        width: 100vw;
+        height: 609px;
+    }
+
+    @media screen and (min-width: 450px) and (max-width: 767px) {
+        width: 450px;
+        height: 609px;
+    }
+    
+    @media screen and (min-width: 1199px) {
+        width: 528px;
+        height: 581px;
+    }
+}
+
+.modal__title {
+    display: block;
+    margin-bottom: 30px;
+    @include font-props(20px, 700, 1.5, 0.6px);
+    color: var(--main-black);
+    text-align: center;
+}
+
+.form__field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.form__label {
+    @include font-props(12px, 400, normal, 0.12px);
+    position: absolute;
+    top: 12px;
+    left: 42px;
+    color: var(--text-grey);
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .form__field:hover &,
+    .form__field:focus-within & {
+        color: var(--accent-blue);
+    }
+}
+
+.form__input {
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 28px;
+    padding-left: 42px;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.20);
+
+    &:hover,
+    &:focus-within {
+        outline: none;
+        border-color: var(--accent-blue);
+    }
+}
+
+/* HOW TO DO "THE SLIDING UP" FIELD NAME: */
+.form__input:focus+.form__label,
+.form__input:not(:placeholder-shown)+.form__label {
+    transform: translateY(-30px) translateX(-30px);
+}
+
+.form__icon {
+    position: absolute;
+    top: 11px;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+    fill: var(--main-black);
+
+    .form__field:hover &,
+    .form__field:focus-within & {
+        fill: var(--accent-blue);
+    }
+}
+
+.form__comment {
+    resize: none;
+    height: 120px;
+    margin: 0;
+    padding: 0;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.20);
+    padding: 12px 42px;
+}
+
+.form__checkbox__label {
+    display: block;
+    margin-top: 20px;
+    margin-left: 9px;
+    @include font-props(12px, 400, normal, 0.36px);
+    color: var(--icon-grey);
+    font-style: normal;
+
+    @media screen and (min-width:1200px) {
+        @include font-props (14px, 400, 1.71, 0.42px);
+    }
+}
+
+/* VISUALLY HIDDEN VALUE */
+.form__checkbox {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.form__checkbox__icon {
+    display: inline-block;
+    margin-right: 7px;
+    width: 16px;
+    height: 15px;
+    outline: none;
+    outline: 1px solid var(--main-black);
+    border-radius: 4px;
+}
+
+.form__checkbox:checked+.form__checkbox__icon {
+    background-color: var(--accent-blue);
+    background-image: url(../images/checkbox_checked.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+}
+
+.form__link {
+    color: var(--accent-blue);
+    text-decoration-line: underline;
+}
+
+.modal__button {
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 52px;
+    border: none;
+
+    color: var(--main-white);
+    background-color: var(--accent-blue);
+
+    border-radius: 4px;
+    @include font-props(16px, 700, 1.87, 0.96px);
+    text-align: center;
+    font-style: normal;
+
+    &:hover {
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    }
+}
+

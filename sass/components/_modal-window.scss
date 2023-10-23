@@ -1,0 +1,46 @@
+.hp__modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    background-color: var(--main-white);
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+    @media screen and (max-width: 767px) {
+        max-width: 450px;
+        height: 609px;
+    }
+
+    @media screen and (min-width: 1199px) {
+        width: 528px;
+        height: 581px;
+    }
+}
+
+.modal__close-button {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    top: 8px;
+    right: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--main-white);
+    @include flex-centering();
+}
+
+.modal__close-icon {
+    width: 18px;
+    height: 18px;
+    fill: var(--main-black);
+
+    .modal__close-button:hover & {
+        fill: var(--accent-blue);
+    }
+}
+
