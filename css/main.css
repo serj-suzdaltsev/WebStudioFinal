@@ -1378,9 +1378,9 @@ img {
     margin-bottom: 30px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .product {
-    flex-basis: calc(50% - 30px);
+    flex: 1 1 calc(50% - 30px);
   }
 }
 @media screen and (min-width: 1200px) {
